@@ -17,7 +17,11 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
 
-await client.change_presence(activity=discord.Game(name='稼働中'))
+client.on('ready', message =>
+{
+  client.user.setPresence({ game: { name: 'with discord.js' } });  
+  console.log('bot is ready!');
+});
 
 bot.run(token)
 
