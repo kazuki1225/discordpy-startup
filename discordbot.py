@@ -16,6 +16,9 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
+
+await client.change_presence(activity=discord.Game(name='稼働中'))
+    
     
 bot.run(token)
 
