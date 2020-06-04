@@ -17,6 +17,11 @@ async def on_command_error(ctx, error):
 async def ping(ctx):
     await ctx.send('pong')
 
+if client.user in message.mentions:
+    reply = f'{message.author.mention} https://tenor.com/view/honda-keisuke-keisuke-honda-thumbs-up-thumbs-gif-5622287'
+    await message.channel.send(reply)
+    
+    
 bot.run(token)
 
 
