@@ -21,7 +21,7 @@ async def ping(ctx):
 async def おはよう(ctx):
     await ctx.send('おっはー！')         
 
-@client.event
+@bot.event
 async def on_ready(message):
     game = discord.Game("/news...")
     await client.change_presence(status=discord.Status.idle, activity=game)
