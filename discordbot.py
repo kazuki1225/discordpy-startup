@@ -23,3 +23,7 @@ async def おはよう(ctx):
 
 bot.run(token)
 
+@bot.event
+async def on_ready(ctx):
+    game = discord.Game("/news...")
+    await client.change_presence(status=discord.Status.idle, activity=game)
