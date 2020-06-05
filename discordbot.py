@@ -25,10 +25,10 @@ bot.run(token)
 
 global voich
 # 接続
-if message.content.startswith('/connect'):
+if message.content.startswith('connect'):
     voich = await discord.VoiceChannel.connect(message.author.voice.channel)
 # 切断
-if message.content.startswith('/discon'):
+if message.content.startswith('discon'):
     await voich.disconnect()
     
     
