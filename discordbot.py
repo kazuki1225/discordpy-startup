@@ -22,7 +22,7 @@ async def おはよう(ctx):
     await ctx.send('おっはー！')         
 
 @bot.event
-async def on_ready(message):
+async def on_message(message):
     game = discord.Game("/news...")
     await client.change_presence(status=discord.Status.idle, activity=game)
     
