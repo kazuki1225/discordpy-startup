@@ -20,7 +20,13 @@ async def ping(ctx):
 @bot.command()
 async def おはよう(ctx):
     await ctx.send('おっはー！')    
-     
+
+await client.change_presence(activity=discord.Game(name='my game'))
+
+# or, for watching:
+activity = discord.Activity(name='my activity', type=discord.ActivityType.watching)
+await client.change_presence(activity=activity)    
+    
 bot.run(token)
 
 
