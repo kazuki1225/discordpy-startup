@@ -16,6 +16,10 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
+
+if client.user in message.mentions:
+    reply = f'{message.author.mention} うるさいよ。'
+    await message.channel.send(reply)    
     
 bot.run(token)
 
