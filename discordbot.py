@@ -27,3 +27,4 @@ async def on_ready(message):
     await client.change_presence(status=discord.Status.idle, activity=game)
     
 bot.run(token)
+
