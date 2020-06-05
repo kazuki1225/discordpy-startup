@@ -19,7 +19,9 @@ async def ping(ctx):
     
 @bot.command()
 async def おはよう(ctx):
-    await ctx.send('おっはー！')    
+    await ctx.send('おっはー！')  
+    
+await client.change_presence(activity=discord.Game(name='○○'))    
 
 bot.run(token)
 
