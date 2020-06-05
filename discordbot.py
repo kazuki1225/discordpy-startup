@@ -35,6 +35,8 @@ async def on_message(message):
         await reply(message) # 返信する非同期関数を実行
 
 @client.event
-async def on_ready(message):
-game = discord.Game("/news...")
-await client.change_presence(status=discord.Status.idle, activity=game)
+client.on('ready', message =>
+{
+  client.user.setPresence({ game: { name: 'メンテナンス中' } });  
+  console.log('bot is ready!');
+});
