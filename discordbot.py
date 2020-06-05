@@ -23,7 +23,12 @@ async def おはよう(ctx):
 
 bot.run(token)
 
-@bot.event
-async def on_ready(ctx):
-    game = discord.Game("/news...")
-    await client.change_presence(status=discord, activity=game)
+global voich
+# 接続
+if message.content.startswith('/connect'):
+    voich = await discord.VoiceChannel.connect(message.author.voice.channel)
+# 切断
+if message.content.startswith('/discon'):
+    await voich.disconnect()
+    
+    
